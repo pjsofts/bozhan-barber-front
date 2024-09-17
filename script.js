@@ -15,7 +15,7 @@ form.addEventListener('submit', async (e) => {
     const utcDateTime = new Date(localDateTime.getTime() - localDateTime.getTimezoneOffset() * 60000);
 
     try {
-        const response = await fetch('http://localhost:1337/api/appointments', {
+        const response = await fetch('https://admin.frontecademy.com/api/appointments', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ form.addEventListener('submit', async (e) => {
 
 async function fetchBarbers() {
     try {
-        const response = await fetch('http://localhost:1337/api/barbers?populate=profile_picture');
+        const response = await fetch('https://admin.frontecademy.com/api/barbers?populate=profile_picture');
         const data = await response.json();
         console.log('Fetched barber data:', data);
         return data.data || [];
@@ -76,7 +76,7 @@ function createBarberCard(barber) {
     const name = barber.attributes?.Name || 'Unknown Barber';
     const bio = barber.attributes?.Bio || 'No bio available';
     const profilePictureUrl = barber.attributes?.profile_picture?.data?.attributes?.url
-        ? `http://localhost:1337${barber.attributes.profile_picture.data.attributes.url}`
+        ? `https://admin.frontecademy.com${barber.attributes.profile_picture.data.attributes.url}`
         : 'default-barber-image.jpg';
 
     card.innerHTML = `
@@ -110,7 +110,7 @@ function populateBarberDropdown(barbers) {
 
 async function fetchServices() {
     try {
-        const response = await fetch('http://localhost:1337/api/services');
+        const response = await fetch('https://admin.frontecademy.com/api/services');
         const data = await response.json();
         console.log('Fetched service data:', data);
         return data.data || [];
