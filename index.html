@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">BarberRes</div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#book">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Look Your Best</h1>
+            <p>Book a session with our expert barbers and stylists.</p>
+            <a href="#book" class="cta-btn">Book Your Appointment</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <img src="images/haircut.jpg" alt="Haircut">
+                <h3>Haircut</h3>
+                <p>Get the perfect cut from top stylists.</p>
+            </div>
+            <div class="card">
+                <img src="images/beard.jpg" alt="Beard Trim">
+                <h3>Beard Trim</h3>
+                <p>Style your beard to perfection.</p>
+            </div>
+            <div class="card">
+                <img src="images/styling.jpg" alt="Styling">
+                <h3>Styling</h3>
+                <p>Professional styling for any occasion.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="barbers" class="barbers-section">
+        <h2>Our Expert Barbers</h2>
+        <div class="barber-cards" id="barber-list">
+            <!-- Barber cards will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <section id="book" class="book-section">
+        <h2>Book Your Appointment</h2>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group date-time-group">
+                <div class="date-input">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="time-input">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="service">Service:</label>
+                <select id="service" required>
+                    <!-- Service options will be dynamically inserted here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="barber">Barber:</label>
+                <select id="barber" required>
+                    <!-- Barber options will be dynamically inserted here -->
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Book Now</button>
+        </form>
+        <div id="success-message" class="success-message hidden">
+            <p>Booking Successful!</p>
+            <p>We look forward to seeing you soon.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 BarberRes. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

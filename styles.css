@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2B2D42;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero {
+    background: url('images/hero-image.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #EF233C;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.cta-btn:hover {
+    background-color: #D90429;
+}
+
+#services {
+    padding: 50px;
+    text-align: center;
+    background-color: #EDF2F4;
+}
+
+#services h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #2B2D42;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.book-section {
+    padding: 50px;
+    background-color: #8D99AE;
+    text-align: center;
+    color: white;
+}
+
+.book-section h2 {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    background-color: #EF233C;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background-color: #D90429;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2B2D42;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Barber section styles */
+.barbers-section {
+    padding: 50px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.barbers-section h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #2B2D42;
+}
+
+.barber-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.barber-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+}
+
+.barber-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.barber-card h3 {
+    margin: 15px 0 10px;
+    color: #2B2D42;
+}
+
+.barber-card p {
+    padding: 0 15px 15px;
+    font-size: 0.9rem;
+    color: #8D99AE;
+}
+
+/* Success message styles */
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.success-message.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.success-message p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.success-message p:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.date-time-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-input, .time-input {
+    width: 48%; /* Adjust as needed */
+}
